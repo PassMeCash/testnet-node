@@ -10,6 +10,7 @@ router.get("/crypto", async (req, res) => {
       result: crypto,
     });
   } catch (err) {
+    console.log(err)
     return res.status(500).json({
       err: err.toString(),
     });
