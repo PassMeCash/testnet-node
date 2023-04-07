@@ -1,7 +1,5 @@
 const express = require('express')
-const env = process.env
-
-const PORT = env.MODE === 'live'? env.PORT : 5000
+const {PORT} = require("./config")
 
 const app = express()
 

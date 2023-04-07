@@ -1,7 +1,13 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
+const {MODE} = require('../config')
+const {db} = require("../api/test/index")
+
+// const coin = MODE==='test'?
 
 const cryptoPriceScrapper = async () => {
+  
+  console.log(db)
   const url = "https://coinmarketcap.com/";
   const coinArray = [];
 
